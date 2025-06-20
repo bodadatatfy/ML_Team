@@ -1,0 +1,516 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hello",
+        "Hey",
+        "Good morning",
+        "Good afternoon",
+        "Good evening",
+        "What's up?",
+        "Hi there"
+      ],
+      "responses": [
+        "Hello! How can I assist you today?",
+        "Hi there! What can I do for you?",
+        "Hey! How can I help?"
+      ],
+      "context_set": "greeting_context"
+    },
+    {
+      "tag": "goodbye",
+      "patterns": [
+        "Bye",
+        "See you later",
+        "Goodbye",
+        "Take care",
+        "Have a nice day",
+        "Farewell",
+        "Catch you later",
+        "Bye for now",
+        "See you soon"
+      ],
+      "responses": [
+        "Goodbye! Have a great day!",
+        "See you later!",
+        "Take care!"
+      ],
+      "context_set": "goodbye_context"
+    },
+    {
+      "tag": "thanks",
+      "patterns": [
+        "Thanks",
+        "Thank you",
+        "Thanks a lot",
+        "Appreciate it",
+        "Thank you so much",
+        "Cheers",
+        "Many thanks"
+      ],
+      "responses": [
+        "You're welcome!",
+        "Happy to help!",
+        "No problem!"
+      ],
+      "context_set": "thanks_context"
+    },
+    {
+      "tag": "help_support",
+      "patterns": [
+        "Help",
+        "I need help",
+        "Can you help me?",
+        "What can you do?",
+        "How does this work?",
+        "I'm stuck",
+        "I need assistance",
+        "Can you assist me?",
+        "I need support",
+        "Can you help me with this issue?",
+        "How do I contact support?",
+        "I have a technical problem",
+        "Your system is not working",
+        "I need technical assistance",
+        "Something is wrong",
+        "I need help with this"
+      ],
+      "responses": [
+        "Sure! I can help you with information, FAQs, and more. What do you need?",
+        "How can I assist you?",
+        "I'm here to help! What do you need?",
+        "I can help you with that. What seems to be the problem?",
+        "Let me connect you with our support team. Please describe the issue."
+      ],
+      "context_set": "help_support_context"
+    },
+    {
+      "tag": "booking_workspace",
+      "patterns": [
+        "I want to book a workspace",
+        "Can I reserve a desk?",
+        "Book a meeting room for me",
+        "I need to reserve a workspace",
+        "Can you help me book a desk?",
+        "I’d like to make a reservation",
+        "Can I book a workspace for tomorrow?"
+      ],
+      "responses": [
+        "Sure! Please tell me the date and time you'd like to reserve a workspace.",
+        "I can help you book a desk. When would you like to reserve it?",
+        "Which type of workspace would you like to book and for what time?",
+        "Let's get your reservation set up. When do you need the workspace?"
+      ],
+      "context_set": "booking_workspace_context"
+    },
+    {
+      "tag": "change_reservation",
+      "patterns": [
+        "Change my reservation",
+        "Can I move my booking to another day?",
+        "I need a different desk",
+        "Can I modify my workspace reservation?",
+        "Switch my meeting room booking"
+      ],
+      "responses": [
+        "Sure! Can you provide the new details for your reservation?",
+        "I'd be happy to help with that. Please let me know when and where you'd like to change your reservation.",
+        "Sure! What changes would you like to make to your booking?"
+      ],
+      "context_set": "change_reservation_context"
+    },
+    {
+      "tag": "cancel_reservation",
+      "patterns": [
+        "Cancel my reservation",
+        "I want to cancel my booking",
+        "Please cancel my workspace reservation",
+        "Can you cancel my desk booking?",
+        "I need to cancel my meeting room reservation",
+        "I’d like to cancel my reservation"
+      ],
+      "responses": [
+        "Your reservation has been cancelled successfully.",
+        "I’ve cancelled your booking. Let me know if you need anything else.",
+        "Your workspace reservation is now cancelled.",
+        "I’ve cancelled your meeting room reservation. Is there anything else I can help with?"
+      ],
+      "context_set": "cancel_reservation_context"
+    },
+    {
+      "tag": "booking_details",
+      "patterns": [
+        "What time is my reservation?",
+        "Tell me about my current booking",
+        "Where is my workspace located?",
+        "Can you give me the details of my booking?",
+        "When is my meeting room reserved for?"
+      ],
+      "responses": [
+        "Sure! Your reservation is for [time] in [location].",
+        "Your workspace is reserved at [time] in [location]. Let me know if you'd like to make any changes.",
+        "Your booking is confirmed for [time] at [location]. Is there anything else I can help with?"
+      ],
+      "context_set": "booking_details_context"
+    },
+    {
+      "tag": "user_preferences",
+      "patterns": [
+        "I prefer a quiet workspace",
+        "I need a standing desk",
+        "Can I book a workspace with a view?",
+        "I like working near windows",
+        "Can you reserve a desk in a corner for me?"
+      ],
+      "responses": [
+        "Got it! I will look for a quiet space for you.",
+        "I will find a standing desk for you.",
+        "I will prioritize spaces with a view. Let me know if you have a specific time in mind!",
+        "Sure! I'll find a desk near a window for you."
+      ],
+      "context_set": "user_preferences_context"
+    },
+    {
+      "tag": "hours",
+      "patterns": [
+        "What are your hours?",
+        "When are you open?",
+        "What time do you close?",
+        "Are you open now?",
+        "What are your business hours?",
+        "When do you open tomorrow?",
+        "Are you open on weekends?",
+        "What are your holiday hours?"
+      ],
+      "responses": [
+        "We are open from 9 AM to 6 PM, Monday to Friday.",
+        "Our hours are 8 AM to 8 PM every day."
+      ],
+      "context_set": "hours_context"
+    },
+    {
+      "tag": "location",
+      "patterns": [
+        "Where are you located?",
+        "What is your address?",
+        "How do I get there?",
+        "Can you give me directions?",
+        "Where is your office?",
+        "What's your location?",
+        "Where can I find you?",
+        "What's your physical address?"
+      ],
+      "responses": [
+        "We are located at 123 Main Street, Cityville.",
+        "Our address is 456 Elm Street, Townsville. Would you like directions?"
+      ],
+      "context_set": "location_context"
+    },
+    {
+      "tag": "directions_for_workspace",
+      "patterns": [
+        "How do I get to my workspace?",
+        "Where is my reserved workspace?",
+        "Can you give me directions to my desk?",
+        "Where is the meeting room located?",
+        "How do I find the workspace I booked?",
+        "Tell me the directions to my reserved desk",
+        "Where do I go for my reservation?"
+      ],
+      "responses": [
+        "Your reserved workspace is located in [building/floor]. To get there, take the [elevator/stairs] to [floor], and your desk will be on the left/right.",
+        "The meeting room is on the [floor] next to the [specific landmark]. Follow the signs and you'll find it on the right.",
+        "You can find your desk at [location], just [specific direction or landmark].",
+        "Your reservation is in [area/section]. Go to [floor], and it will be near [specific landmark].",
+        "The workspace is on [floor]. From the elevator, take a right and walk straight ahead."
+      ],
+      "context_set": "directions_for_workspace_context"
+    },
+    {
+      "tag": "complaint",
+      "patterns": [
+        "I have a complaint",
+        "This is not working",
+        "I'm not satisfied",
+        "I want to report an issue",
+        "Your service is bad",
+        "I'm unhappy with this",
+        "This is unacceptable",
+        "I need to file a complaint"
+      ],
+      "responses": [
+        "I'm sorry to hear that. Can you please provide more details?",
+        "Let me help you resolve this issue. What happened?"
+      ],
+      "context_set": "complaint_context"
+    },
+    {
+      "tag": "workspace_features",
+      "patterns": [
+        "What amenities does the workspace have?",
+        "Is there Wi-Fi in the meeting rooms?",
+        "Do you have printers or monitors?",
+        "What facilities are available in the workspace?",
+        "Tell me about the features of your desks",
+        "Is it soundproof?",
+        "How many people fit?"
+      ],
+      "responses": [
+        "Our workspaces come with free Wi-Fi, meeting rooms, and comfortable seating.",
+        "Yes, we have Wi-Fi available in all areas, including the meeting rooms.",
+        "Our workspaces are equipped with printers, monitors, and other office essentials.",
+        "The workspaces have high-speed internet, projectors, and ergonomic chairs.",
+        "We offer workspaces with a variety of features including printers, Wi-Fi, and whiteboards.",
+        "Yes, the room is soundproof and has all necessary equipment for meetings.",
+        "The meeting room fits up to [X] people and includes a projector, Wi-Fi, and a whiteboard."
+      ],
+      "context_set": "workspace_features_context"
+    },
+    {
+      "tag": "price_inquiry",
+      "patterns": [
+        "How much does it cost to reserve a desk?",
+        "What are the rates for the meeting rooms?",
+        "Can you tell me the price for a workspace?",
+        "How much is a day pass for a workspace?",
+        "What are the charges for booking a meeting room?",
+        "How much do I pay for a desk reservation?",
+        "What’s the price for reserving a workspace for the day?",
+        "Can you give me the pricing details for workspaces?"
+      ],
+      "responses": [
+        "The price for reserving a desk is [price].",
+        "Our meeting rooms are available for [price] per hour.",
+        "We offer workspaces starting at [price] per day. Let me know what type you're interested in!",
+        "The rate for a day pass is [price]. Would you like to book a desk?",
+        "Meeting rooms are priced at [price] per hour. Would you like to reserve one?"
+      ],
+      "context_set": "price_inquiry_context"
+    },
+    {
+      "tag": "payment",
+      "patterns": [
+        "How do I make a payment?",
+        "What payment methods do you accept?",
+        "Can I pay with credit card?",
+        "Do you accept PayPal?",
+        "How do I complete my payment?",
+        "What are my payment options?",
+        "Can I use Apple Pay?",
+        "Do you accept cryptocurrency?"
+      ],
+      "responses": [
+        "We accept credit cards, PayPal, and bank transfers.",
+        "You can pay using a credit card or PayPal. How would you like to proceed?"
+      ],
+      "context_set": "payment_context"
+    },
+    {
+      "tag": "discount_inquiry",
+      "patterns": [
+        "Do you offer any discounts?",
+        "Are there any promotions or deals available?",
+        "Can I get a discount on my reservation?",
+        "Is there a discount for booking multiple desks?",
+        "Are there special rates for long-term bookings?",
+        "Do you have any discounts for first-time users?",
+        "Are there any seasonal discounts?"
+      ],
+      "responses": [
+        "Yes, we offer discounts for long-term bookings. Contact us for more details!",
+        "We have seasonal promotions running. You can check our current deals on the website or contact support for more information.",
+        "There’s a discount available for first-time users. Let me know if you want to know more!",
+        "We offer a [percentage]% discount on bookings of three or more desks. Would you like to book multiple workspaces?",
+        "Currently, we have a special offer of [percentage]% off for bookings made before [date]."
+      ],
+      "context_set": "discount_inquiry_context"
+    },
+    {
+      "tag": "account",
+      "patterns": [
+        "How do I create an account?",
+        "Can I update my account details?",
+        "I forgot my password",
+        "How do I reset my password?",
+        "Can you help me with my account?",
+        "I need to change my email",
+        "How do I delete my account?",
+        "Can I change my username?"
+      ],
+      "responses": [
+        "You can create an account on our website. Would you like a guide?",
+        "I can help you reset your password. Please provide your email address."
+      ],
+      "context_set": "account_context"
+    },
+    {
+      "tag": "technical_issue",
+      "patterns": [
+        "The website is not working",
+        "I can't log in",
+        "There's an error on the page",
+        "The app is crashing",
+        "I'm having trouble with the system",
+        "Something is broken",
+        "The page won't load",
+        "I'm experiencing a bug"
+      ],
+      "responses": [
+        "I'm sorry to hear that. Let me help you troubleshoot the issue.",
+        "Please describe the problem in detail so I can assist you."
+      ],
+      "context_set": "technical_issue_context"
+    },
+    {
+      "tag": "faq",
+      "patterns": [
+        "What are your FAQs?",
+        "Where can I find answers?",
+        "Can you explain how this works?",
+        "I have a question",
+        "What should I know?",
+        "Tell me more",
+        "What are common questions?",
+        "Can you answer some questions?"
+      ],
+      "responses": [
+        "You can find our FAQs on the help page. Is there something specific you need?",
+        "Let me answer your question. What do you need to know?"
+      ],
+      "context_set": "faq_context"
+    },
+    {
+      "tag": "social_media_inquiry",
+      "patterns": [
+        "Where can I follow you on social media?",
+        "What are your social media handles?",
+        "Can I find you on Facebook or Instagram?",
+        "Do you have a Twitter account?",
+        "Where can I find updates on your social media?",
+        "Are you on LinkedIn or any other social platforms?",
+        "Can I follow you for the latest news and updates?"
+      ],
+      "responses": [
+        "You can follow us on [Facebook, Twitter, Instagram, LinkedIn] for the latest updates!",
+        "We’re active on social media! Check us out on [Facebook/Instagram/Twitter] at @[handle].",
+        "Follow us on [Instagram] @ourhandle for updates, promotions, and news.",
+        "You can find us on [Facebook], [Instagram], and [Twitter] for updates and offers.",
+        "Stay updated with our latest news on [platform] at @[handle]."
+      ],
+      "context_set": "social_media_inquiry_context"
+    },
+    {
+      "tag": "privacy",
+      "patterns": [
+        "What is your privacy policy?",
+        "How do you handle my data?",
+        "Is my information safe?",
+        "Do you share my data?",
+        "What are your data practices?",
+        "How do you protect my privacy?",
+        "Can I delete my data?",
+        "What happens to my information?"
+      ],
+      "responses": [
+        "We take your privacy seriously. You can read our privacy policy here: [link].",
+        "Your data is secure with us. Here's how we protect it: [link]."
+      ],
+      "context_set": "privacy_context"
+    },
+    {
+      "tag": "terms",
+      "patterns": [
+        "What are your terms and conditions?",
+        "Can I see your terms?",
+        "What are the rules?",
+        "What are your policies?",
+        "How do your terms work?",
+        "Can you explain your terms?",
+        "What are the conditions?",
+        "What are the rules of use?"
+      ],
+      "responses": [
+        "You can find our terms and conditions here: [link].",
+        "Here are our terms of service: [link]."
+      ],
+      "context_set": "terms_context"
+    },
+    {
+      "tag": "permissions",
+      "patterns": [
+        "What are my permissions?",
+        "Do I have access to this feature?",
+        "Can I edit this?",
+        "Who has the authority to change settings?",
+        "How do I request additional access?",
+        "Am I allowed to delete this?",
+        "Do I have admin rights?",
+        "What roles are available?",
+        "Can I grant permissions to others?",
+        "How do I change my access level?"
+      ],
+      "responses": [
+        "You have the following permissions: [list specific permissions].",
+        "Yes, you have access to this feature.",
+        "No, you don't have permission to edit this.",
+        "Only admins have the authority to change settings.",
+        "You can request additional access by contacting support.",
+        "You are allowed to delete this item.",
+        "Yes, you have admin rights.",
+        "The available roles are: Admin, Editor, Viewer.",
+        "You can grant permissions to others through the settings.",
+        "To change your access level, please contact the administrator."
+      ],
+      "context_set": "permissions_context"
+    },
+    {
+      "tag": "workspace",
+      "patterns": [
+        "How to improve my workspace?",
+        "Best tools for a workspace?",
+        "How to organize my workspace?",
+        "Best workspace practices?",
+        "How to make my workspace comfortable?",
+        "Right furniture for a workspace?",
+        "How to choose a workspace location?",
+        "Tips for a productive workspace?",
+        "Best lighting for a workspace?"
+      ],
+      "responses": [
+        "Ensure good lighting, enough space, and organization.",
+        "Use a comfortable desk, ergonomic chair, and proper lighting.",
+        "Keep it tidy with storage solutions like shelves and drawers.",
+        "Minimize distractions and maintain a clean setup.",
+        "Choose ergonomic furniture and ensure good ventilation.",
+        "Use a spacious desk and a supportive chair.",
+        "Pick a quiet area with natural light.",
+        "Reduce clutter and stay focused.",
+        "Use natural or soft LED lighting."
+      ],
+      "context_set": "workspace_context"
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "I don't understand",
+        "Can you help me with something else?",
+        "What do you mean?",
+        "Sorry, I didn't get that",
+        "I don't know what you're talking about",
+        "Could you explain that again?",
+        "I'm not sure what you mean",
+        "Can you clarify that for me?"
+      ],
+      "responses": [
+        "Sorry, I didn’t quite understand that. Could you please rephrase?",
+        "I’m not sure I follow. Could you try asking something else?",
+        "Sorry about that! Could you clarify your question?",
+        "Hmm, I didn’t quite catch that. Can you say that again?",
+        "I’m not sure what you mean. Can you please explain in a different way?"
+      ],
+      "context_set": "fallback_context"
+    }
+  ]
+}
